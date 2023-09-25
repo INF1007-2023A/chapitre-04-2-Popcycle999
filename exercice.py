@@ -4,16 +4,22 @@
 import random
 
 def get_first_part_of_name(name):
-	return ""
+	return name.split('-')[0].lower().capitalize()
 
 def get_random_sentence(animals, adjectives, fruits):
-	return ""
+	return [random.choice(animals), random.choice(adjectives), random.choice(fruits)]
 
 def encrypt(text, shift):
-	return ""
+	text_1 = text[:-shift]
+	text_1 = text[len(text) - shift:] + text_1
+
+	return text_1
 
 def decrypt(encrypted_text, shift):
-	return ""
+	txt = encrypted_text[shift:]
+	txt = txt + encrypted_text[:shift]
+
+	return txt
 
 
 if __name__ == "__main__":
